@@ -1,0 +1,22 @@
+{
+    "name": "新华字典",
+    "version": "1.0.5",
+    "description" : "通过划词返回新华字典的结果",
+    "manifest_version": 2,
+    "permissions": [
+        "https://api.leancloud.cn/*"
+    ],
+    "icons":
+    {
+
+      "48": "xinhua.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*"],
+          "css" : ["xinhua.css"],
+          "js": ["av-min.js", "jquery.min.js", "xinhua.js"]
+        }
+      ]
+
+}
